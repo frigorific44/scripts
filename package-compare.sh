@@ -7,5 +7,5 @@ LIST=$(sed '/^$/d;/#.*/d' "$LIST_FILE" | sort -)
 CURR=$(pacman -Qe | sed 's/ .*//g' | sort -)
 echo "*** NEW PACKAGES ***"
 comm -23 <(echo "$CURR") <(echo "$LIST")
-printf "\n*** REMOVED PACKAGES ***"
+printf "\n*** REMOVED PACKAGES ***\n"
 comm -13 <(echo "$CURR") <(echo "$LIST")
