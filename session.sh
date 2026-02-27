@@ -24,5 +24,3 @@ elif [[ "${session_path,,}" =~ /(video|videos|movie|movies)/ ]]; then
   swaymsg splitv
   (kitty >/dev/null 2>&1 &)
 fi
-
-exit
